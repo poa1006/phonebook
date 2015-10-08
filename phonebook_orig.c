@@ -5,6 +5,10 @@
 
 #include "phonebook_orig.h"
 
+void impl_initialize()
+{
+    return;
+}
 /* original version */
 entry *findName(char lastname[], entry *pHead)
 {

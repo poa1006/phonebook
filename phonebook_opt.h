@@ -9,7 +9,7 @@ typedef struct __LAST_NAME_ENTRY {
     char lastName[MAX_LAST_NAME_SIZE];
     struct __LAST_NAME_DETAIL *pDetail;
     struct __LAST_NAME_ENTRY *pNext;
-}entry;
+} entry;
 
 typedef struct __LAST_NAME_DETAIL {
     char firstName[16];
@@ -23,14 +23,9 @@ typedef struct __LAST_NAME_DETAIL {
     char zip[5];
 } details;
 
-typedef struct HASH_TABLE {
-    int size;
-    entry **table;
-} hashtable;
-
-hashtable *CreateTable(int size);
+void impl_initialize();
 int GetHashKey(char *lastName,int size);
-entry *findName(char lastname[], hashtable *h);
-entry *append(char lastName[], hashtable *h);
+entry *findName(char lastname[], entry *e);
+entry *append(char lastName[], entry *e);
 
 #endif

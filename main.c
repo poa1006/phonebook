@@ -70,11 +70,21 @@ int main(int argc, char *argv[])
     /* the givn last name to find */
     char input[MAX_LAST_NAME_SIZE] = "zyxel";
     e = pHead;
+#if defined(OPT)
+    int value=0;
+    for(int i=0; i<TABLE_SIZE; i++)
+        if(hasht->table[i])
+            value++;
+    printf("usage of table = %d\n",value);
+#endif
+
 
 
     assert(findName(input, e) &&
            "Did you implement findName() in " IMPL "?");
     assert(0 == strcmp(findName(input, e)->lastName, "zyxel"));
+
+
 
 
 

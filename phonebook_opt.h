@@ -9,7 +9,7 @@ typedef struct __LAST_NAME_ENTRY {
     char lastName[MAX_LAST_NAME_SIZE];
     struct __LAST_NAME_DETAIL *pDetail;
     struct __LAST_NAME_ENTRY *pNext;
-} entry;
+}entry;
 
 typedef struct __LAST_NAME_DETAIL {
     char firstName[16];
